@@ -1,0 +1,55 @@
+.flex {
+    display: flex;
+    flex-flow: row wrap;
+    border: 1px solid;
+    margin: 0 0 10px;
+    font-family: monospace;
+    font-size: 1.1em;
+}
+
+.h-control {
+    box-sizing: border-box;
+    margin: 5px;
+    width: 150px;
+    display: flex;
+    flex-flow: row wrap;
+    align-items: flex-start;
+    align-content: flex-start;
+}
+
+.dropdown > select {
+    width: 110px;
+}
+
+.v-control {
+    width: 150px;
+    height: 150px;
+    text-align: center;
+    transform: rotate(-90deg) translate(0, 10px);
+    input {
+        transform: rotate(180deg) translate(0, 0px);
+    }
+}
+
+.fig {
+    position: relative;
+}
+
+.square {
+    border: 2px solid;
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    box-sizing: border-box;
+}
+
+.round {
+    @extend .square;
+    border-radius: 50%;
+}
+
+.diamond {
+    @extend .square;
+    transform: rotate(45deg) translate(0, 0) scale(0.7);
+
+}

@@ -1,0 +1,174 @@
+$f:2em; //font-size
+$w:400px; // table width
+$b:30px; // buttons
+caption,
+td,
+tr,
+table,
+button,
+input,
+body {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    background: url('../img/BG.png') repeat-x 0 0 scroll;
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    overflow-x: hidden;
+}
+
+table {
+    position: absolute;
+    top: 100px;
+    border-spacing: 0;
+}
+
+button {
+    background: none;
+    border: 0;
+}
+
+/*title*****
+************/
+
+.title,
+.add {
+    margin: 7px 0 //crutch #1
+}
+
+/*name*/
+
+caption {
+    background-color: #222;
+    width: $w;
+    height: $b;
+    text-shadow: 2px 1px 3px darkgray;
+    font-family: 'Exo 2', sans-serif;
+    font-size: $f - 0.9em;
+    font-weight: 700;
+    color: #eee;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+/*button*/
+
+.add {
+    color: #eee;
+    position: relative;
+    left: 116px; //crutch #2
+}
+
+/*list*****
+************/
+
+/* fa buttons and checkbox*/
+
+.fa,
+td:nth-child(2) {
+    width: $b;
+    text-align: center;
+}
+
+.fa:before {
+    font-size: $f * 0.6
+}
+
+/*lines*/
+
+td {
+    background-color: #fffa89;
+    border-bottom: 1px solid #8d8d8d;
+    box-sizing: border-box;
+    height: $b;
+}
+
+td:nth-child(2) {
+    border-right: 4px double #ff6347;
+}
+
+tr:last-of-type {
+    & td:last-child {
+        border-bottom-right-radius: 10px;
+    }
+    & td:first-child {
+        border-bottom-left-radius: 10px;
+    }
+}
+
+
+
+input[type="checkbox"] {
+    width: $b * 0.7;
+    height: $b * 0.7;
+    margin: 4px 0 0 -5px; //crutch #3
+    cursor: pointer;
+}
+
+input[type="text"] {
+    font-family: 'Exo 2', sans-serif;
+    font-size: $f * 0.6;
+    margin: 0 5px;
+    width: 300px;
+    height: $b*0.9;
+    border: none;
+    background: none;
+}
+
+/* focus style*/
+
+.add:focus {
+    outline: none;
+    color: #ff6347;
+}
+
+.add:active {
+    color: #fffa89;
+}
+
+.del:focus {
+    outline: none;
+    color: #ff6347;
+}
+
+.checkbox:focus {
+    outline: none;
+    box-shadow: 0 0 10px -1px #ff6347;
+}
+
+input[type="text"]:focus {
+    outline: none;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: 2px solid #ff6347;
+    margin-top: 2px;
+}
+
+input[type="checkbox"]:focus {
+    outline: none;
+    box-shadow: 0 3px 7px -2px #ff6347;
+}
+
+
+
+/* sortable*/
+
+.placeholder {
+    height: $b;
+    width: $w;
+}
+
+.dragged {
+    position: absolute;
+    width: $w;
+}
